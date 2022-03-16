@@ -1,3 +1,4 @@
+/* global axios */
 const url = 'https://hexschool.github.io/js-filter-data/data.json';
 
 let data = [];
@@ -26,7 +27,6 @@ function renderData(filterData) {
   table.innerHTML = str;
 }
 
-// eslint-disable-next-line no-undef
 axios.get(url).then((res) => {
   data = res.data.filter((a) => a.作物名稱);
   renderData(data);
